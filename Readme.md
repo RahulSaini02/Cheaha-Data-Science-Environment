@@ -13,15 +13,15 @@ New job composer .sh script
 module load cuda10.0/toolkit
 module load Anaconda3
 
-FOLDER=/data/user/$USER/mldl
+FOLDER=/data/user/$USER/ds
 URL=https://github.com/RahulSaini02/Cheaha-Data-Science-Environment.git
 if [ ! -d "$FOLDER" ] ; then
   git clone "$URL" "$FOLDER"
-conda env create -f /data/user/$USER/mldl/packages.yml --name mldl
+conda env create -f /data/user/$USER/ds/packages.yml --name ds
 else
   cd $FOLDER
   git pull "$URL"
-  conda env update -n nbotw -f /data/user/$USER/mldl/packages.yml
+  conda env update -n ds -f /data/user/$USER/ds/packages.yml
 fi
 
 ```
@@ -38,7 +38,7 @@ module load Anaconda3
 Under Extra jupyter arguments, specify
 
 ```
---notebook-dir=/data/user/$USER/mldl
+--notebook-dir=/data/user/$USER/ds
 ```
 
 For partition, specify
