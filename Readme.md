@@ -13,7 +13,7 @@ New job composer .sh script
   module load Anaconda3
 
   FOLDER=/data/user/$USER/nbotw
-  URL=https://gitlab.rc.uab.edu/rc-data-science/horovod-environment.git
+  URL=https://github.com/RahulSaini02/Cheaha-Data-Science-Environment.git
   if [ ! -d "$FOLDER" ] ; then
       git clone "$URL" "$FOLDER"
   conda env create -f /data/user/$USER/nbotw/nbotw.yml --name nbotw
